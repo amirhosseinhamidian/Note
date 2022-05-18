@@ -1,15 +1,27 @@
 package com.amirhossein.note.data.note.local
 
+import androidx.annotation.NonNull
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
 
-@Entity
+@Entity(tableName = "note_table")
 data class NoteEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val title: String? = null,
-    val mainText: String? = null,
-    val createDate: Date,
-    val updateDate: Date? = null,
+
+    @ColumnInfo(name = "title")
+    val title: String,
+
+    @ColumnInfo(name = "main_text")
+    val mainText: String,
+
+    @NonNull
+    @ColumnInfo(name = "create_date")
+    val createDate: Int,
+
+    @ColumnInfo(name = "update_date")
+    val updateDate: Int,
+
 )

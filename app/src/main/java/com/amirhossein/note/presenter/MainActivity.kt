@@ -1,4 +1,4 @@
-package com.amirhossein.note
+package com.amirhossein.note.presenter
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
